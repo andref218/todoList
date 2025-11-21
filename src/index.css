@@ -1,0 +1,136 @@
+* {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #202124;
+}
+
+h1,
+h2,
+h3,
+input,
+button {
+  font-family: "Press Start 2P", system-ui;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* start from the top */
+  /* justify-content: center;  /* center vertically */
+  align-items: center; /* center horizontally */
+  padding: 14px;
+  padding-top: 14vh; /* pushes the content down from the top */
+  background: #eff6ff;
+  gap: 14px; /* space between elements */
+}
+
+header {
+  display: flex;
+  align-items: stretch; /* keep input + button same height */
+}
+
+header,
+.main {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto; /* centers the block horizontally */
+  gap: 14px; /* spacing between elements inside */
+}
+
+header input {
+  flex: 1;
+  border-radius: 14px;
+  outline: none;
+  width: 100%; /* ensures it grows properly */
+}
+
+header button {
+  border-radius: 14px;
+  background: transparent;
+  transition-duration: 200ms; /* smooth hover effect */
+  cursor: pointer; /* pointer cursor */
+}
+
+header button:hover {
+  opacity: 0.7; /* hover fade effect */
+}
+
+header button,
+header input {
+  padding: 14px 18px; /* consistent spacing inside */
+  border: none;
+  outline: none;
+  background: white;
+}
+
+p {
+  font-size: 0.9em; /* default paragraph size */
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 14px; /* space between todo items */
+}
+
+.todoItem {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  border-radius: 14px;
+  background: white; /* white todo box */
+}
+
+.todoItem p {
+  flex: 1; /* text expands to fill space */
+}
+
+.actionsContainer {
+  display: flex;
+  align-items: center;
+  gap: 14px; /* space between action buttons */
+}
+
+.actionsContainer button {
+  transition-duration: 200ms;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.actionsContainer button:hover {
+  opacity: 0.7; /* hover fade */
+}
+
+@media (min-width: 640px) {
+  header button,
+  header input {
+    font-size: 1.2em; /* bigger input/button text on larger screens */
+  }
+
+  p {
+    font-size: 1em; /* bigger paragraph text on larger screens */
+  }
+}
+
+.emptyMessage {
+  margin-top: 35px; /* spacing above empty message */
+  text-align: center;
+  font-size: 1em;
+  color: #555;
+  font-family: "Press Start 2P", system-ui;
+  font-size: 14px; /* fixed pixel size */
+}
+
+.title {
+  font-family: "Press Start 2P", system-ui;
+  text-align: center;
+  font-size: clamp(16px, 3vw, 28px); /* responsive title size */
+  margin-bottom: 20px; /* space below the title */
+  /*margin-top: -8vh; /* raise the title upward */
+  color: #202124;
+}
